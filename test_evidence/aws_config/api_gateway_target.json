@@ -1,0 +1,54 @@
+{
+    "name": "order-tracker",
+    "status": "READY",
+    "targetConfiguration": {
+        "mcp": {
+            "apiGateway": {
+                "restApiId": "b9vqrt157d",
+                "stage": "prod",
+                "apiGatewayToolConfiguration": {
+                    "toolOverrides": [
+                        {
+                            "name": "get_customer",
+                            "description": "",
+                            "path": "/customers/{customer_id}",
+                            "method": "GET"
+                        },
+                        {
+                            "name": "get_customer_orders",
+                            "description": "",
+                            "path": "/customers/{customer_id}/orders",
+                            "method": "GET"
+                        },
+                        {
+                            "name": "get_order",
+                            "description": "",
+                            "path": "/orders/{order_id}",
+                            "method": "GET"
+                        }
+                    ],
+                    "toolFilters": [
+                        {
+                            "filterPath": "/customers/{customer_id}",
+                            "methods": [
+                                "GET"
+                            ]
+                        },
+                        {
+                            "filterPath": "/customers/{customer_id}/orders",
+                            "methods": [
+                                "GET"
+                            ]
+                        },
+                        {
+                            "filterPath": "/orders/{order_id}",
+                            "methods": [
+                                "GET"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
